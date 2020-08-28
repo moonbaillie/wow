@@ -1,0 +1,12 @@
+let detailX;
+function setup() {
+  createCanvas(600, 400, WEBGL);
+  detailX = createSlider(2, 24, 12);
+  detailX.position(50, height + 15);
+  detailX.style('width', '80px');
+}
+
+function draw() {
+  rotateY(millis() / 1500);
+  ellipsoid(100, 150, 150, detailX.value(), 24);
+}
